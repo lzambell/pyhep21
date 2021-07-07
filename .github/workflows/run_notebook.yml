@@ -9,10 +9,10 @@ jobs:
     - uses: actions/checkout@v1
     - name: Set up Python
       uses: actions/setup-python@v1
-    - run: pip install -r requirements.txt
+    - run: | 
+        pip install -r requirements.txt
+        pip install nbconvert 
+    - name: Run notebook
+      run: jupyter-nbconvert lardon.ipynb --to notebook --execute
     
-    - uses: yaananth/run-notebook@v1
-      with:
-        notebook: "lardon.ipynb"
-
 
