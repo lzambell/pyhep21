@@ -9,3 +9,7 @@ hits_list = []
 evt_hits_list = []
 evt_trk2D_list = []
 evt_trk3D_list = []
+
+def reset():
+    data[:,:,:] = 0.
+    mask[:,:] = True
